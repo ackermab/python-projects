@@ -3,6 +3,7 @@
 
 #### caesar.py
 Use: 
-> python caesar.py -i <inputfile> -c <cycles>
+> python caesar.py -i \<inputfile\> -c \<cycles\>
+
 Example: 
 > python caesar.py -i rot13.txt -c 13
