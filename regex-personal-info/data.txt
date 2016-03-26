@@ -1,0 +1,7 @@
+This is just some text to test the capabilities of this personal information finder.
+123-456-7890
+(123)-456-7890
+12-345-67890
+blahblah@yahoo.vom
+blah@yahoo.com
+Some extra filler123-456-7890text

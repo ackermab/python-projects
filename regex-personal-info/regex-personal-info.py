@@ -16,11 +16,15 @@ def main(argv):
 		content = ifile.read()
 		ifile.close()
 
-		matchPhone = re.search(phoneRegex, content)
+		matchPhone = re.findall(phoneRegex, content)
 		matchEmail = re.search(emailRegex, content)
 
-		
-		print(inputfile)
+		if matchPhone:
+			print("Phone numbers found:")
+			for number in matchPhone:
+				print(number)
+		else:
+			print("No phone numbers found.")
 
 if __name__ == "__main__":
 	main(sys.argv[1:])

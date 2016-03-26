@@ -6,7 +6,8 @@ def extractFile(zFile, password):
 		zFile.extractall(pwd=password)
 		print("[+] Password Found: " + password)
 	except:
-		pass	
+		print("[-] Password Failed: \"" + password + "\"")
+		pass
 
 def main():
 	parser = optparse.OptionParser("usage%prog -f <zipFile> -d <dictionaryFile>")
@@ -26,7 +27,7 @@ def main():
 
 	for line in passFile.readlines():
 		password = line.strip("\n")
-		t = Thread(target=extractFile, args=(zFile, password.encode('utf-8')))
+		t = Thread(target=extractFile, args=(zFile, password))#password.encode('utf-8')))
 		t.start()
 
 if __name__ == "__main__":
